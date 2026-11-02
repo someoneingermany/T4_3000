@@ -1,0 +1,46 @@
+Mögliche Zielsetzung 
+
+Die 5 Warums 
+
+1. Warum wollen wir das untersuchen? 
+ Moderne Fahrzeuge werden zunehmend softwaredefiniert. Funktionen wie Bremsen, Lenken oder Fahrerassistenz werden per Software gesteuert und per OTA aktualisiert. Damit wird die Software-Lieferkette selbst zum Angriffsziel. 
+
+2. Warum ist die Software-Lieferkette ein Problem? 
+ Ein OTA-Update gilt als vertrauenswürdig, weil es signiert ist und vom Hersteller kommt. Supply-Chain-Angriffe aus der IT (z. B. SolarWinds) zeigen jedoch, dass Schadcode schon beim Zulieferer oder im Build-Prozess eingeschleust werden kann. Er wird dann regulär signiert und auf tausende Fahrzeuge gleichzeitig verteilt. 
+
+3. Warum ist das gefährlicher als bei einem normalen IT-System? 
+ Im Fahrzeug haben manipulierte Aktoren und Sensoren physische Folgen. Ein verfälschter Radarsensor, ein manipuliertes Bremssteuergerät oder eine veränderte Lenkunterstützung kann Unfälle mit Personenschäden verursachen. Aus einem IT-Sicherheitsproblem wird damit ein Problem der OT. 
+
+4. Warum reicht es nicht, nur die OT zu betrachten? 
+ An der Kette sind viele Akteure beteiligt: Hersteller (OEM), Tier-1/Tier-2-Zulieferer, Softwarelieferanten, Werkstätten, Halter und Angreifer. Im Schadensfall ist unklar, wer verantwortlich ist. Die Rechtslage ist verteilt und teilweise neu: 
+
+    Produkthaftungsgesetz und die neue EU-Produkthaftungsrichtlinie 2024/2853, die Software ausdrücklich als Produkt erfasst 
+
+    Deliktsrecht (§ 823 BGB) 
+
+    Halterhaftung (§ 7 StVG) 
+
+    Strafrecht (§§ 202a, 303a/b, 263 StGB) 
+
+    Typgenehmigungsvorgaben UNECE R155 (Cybersecurity) und R156 (Software-Updates) 
+
+5. Warum ist diese Klärung wichtig? 
+ Ohne klare Haftungszuordnung bleiben Geschädigte auf Schäden sitzen, Hersteller und Zulieferer haben weniger Anreiz, in Lieferkettensicherheit zu investieren, und das Vertrauen in vernetzte und automatisierte Mobilität sinkt. Hier liegt der eigentliche Zweck der Arbeit: technische Risiken und rechtliche Verantwortung zusammenzuführen. 
+
+ 
+
+Abgeleitete Zielsetzung 
+
+Hauptziel: 
+ Die Arbeit soll aufzeigen, welche sicherheitsrelevanten Sensoren und Aktoren in modernen Fahrzeugen durch Supply-Chain-Angriffe über OTA-Updates manipuliert werden können, und bewerten, wie die Haftung im Schadensfall nach geltendem und kommendem Recht verteilt ist. 
+
+
+ 
+ 
+ /// zu zitieren ///
+ 
+ VW Rückruf mit Batteriedrosselung etc.
+
+ Kia Performance Upgrade als Frage (Dauerleistung, Fahrzeugneueintrag "Online"-Upgrade)
+
+ Ransomware by Driver (while driving)
