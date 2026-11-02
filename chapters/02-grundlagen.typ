@@ -38,10 +38,48 @@ Zum 1.~Januar~2026 waren in Deutschland 9.486.487 Personenkraftwagen zugelassen.
 
 Die zweiter Eigenschaft betrifft die Herkunft der Software. Ein Fahrzeughersteller, im Folgenden als #gls("OEM") bezeichnet, entwickelt einen Teil der Software selbst. Viele Steuergeräte werden von Zulieferern entwickelt, die als Tier-1-Zulieferer unmittelbar an den OEM liefern und ihrerseits Komponenten und Software von Tier-2-Zulieferern beziehen. Die Software eines Steuergeräts wird häufig vom Zulieferer gepflegt und an den OEM übergeben, der sie anschließend an die Fahrzeuge verteilt @kuppusamy2017login . Mit dem Wandel zum SDV verschiebt sich diese Struktur, da Hersteller mehr Software selbst entwickeln und zugleich Softwareanbieter außerhalb der klassischen Zulieferkette hinzukommen @khamis2025rethinking.  #cite(form: "prose", <khamis2025rethinking>) bezeichnen diese Entwicklung als Dezentralisierung der Lieferkette.
 
-
+Für die vorliegende Arbeit ergeben sich daraus zwei Folgerungen. Erstens stehen Funktionsumfang und Verhalten eines Fahrzeugs bei Auslieferung nicht mehr endgültig fest. Der technische Zustand eines Fahrzeugs zum Zeitpunkt eines Unfalls kann sich daher erheblich von dem Zustand unterscheiden, in  dem es typgenehmigt und verkauft wurde @unece2021r156. Zweitens ist an der Software eines Fahrzeugs eine Vielzahl von Organisationen beteiligt. Jede dieser Organisationen bildet einen möglichen Ansatz für Angriffe auf die Lieferkette, die in @ch:supply-chain[Kapitel] untersucht werden.
 
 
 == E/E-Architektur <sec:ee-architektur>
+
+Als Elektrik/Elektronik-Architektur kurz E/E-Architektur, wird die Gesamtheit der elektronischen Komponenten eines Fahrzeugs und ihrer Vernetzung bezeichnet. Dazu gehören Steuergeräte, Sensoren, Aktoren, Kabelbäume und Kommunikationsnetze sowie die Zuordnung der Fahrzeugfunktionen zu diesen Komponenten @jiang2024sdv. Die E/E- Architektur legt damit fest, wo eine Funktion berechnet wird, welche Daten sie benötigt und über welche Wege diese Daten fließen.
+
+=== Steuergeräte
+
+Zentraler Baustein der E/E-Architektur ist das Steuergerät, englisch #gls("ECU"). Ein Steuergerät besteht aus einem Miktrocontroller mit Programm- und Datenspeicher, Schaltungen zur Aufbereitung von Sensorsignalen, Treiberstufen zu Ansteuerung von Aktoren, sowie Schnittstellen zu den Fahrzeugnetzen. Die Software liest zyklisch Sensorwerte ein, berechnet daraus Stellgrößen und gibt diese an die Aktoren weiter. Viele Regelungen laufen in festen Zeitrastern von wenigen Millisekunden ab @reif2014automobilelektronik.
+
+Die Software liegt im nichtflüchtigen Speicher des Mikrocontrollers, heute überwiegend im Flash-Speicher. Für diese eng an die Hardware gebundene Software wird häufig der Begriff Firmware verwendet. Neben der eigentlichen Anwendungnssoftware enthält eine Steuergerät einen Bootloader. Dieser wird beim Start zuerst ausgeführt und ermöglicht es, die Anwendugnssoftware neu zu programmieren, ohne das Steuergerät auszubauen @reif2014automobilelektronik. Die Programmierung erfolgt über Diagnoseprotokolle, die in im späteren Verlauf kurz vorgestellt werden. In der Werkstatt läuft dies vereinfacht wie folgt ab: Ein Diagnosegerät wird an das Fahrzeug angeschlossen und versetzt das Steuergerät in einen Programmiermodus. Der Bootloader übernimmt die Kontrolle, löscht den Speicherbereich der alten ANwendugnssoftware, empfängt die neue Software blockweise und schreibt sie in den Flash-Speicher. Anschließend prüft er die neue Software und startet sie @zimmermann2014bussysteme @iso14229-1. Für die vorliegende Arbeit ist der Bootloader von besonderer Bedeutung, weil er die Stelle ist, an der ein Steuergerät über die Annahme neuer Software entscheidet.
+
+Steuergeräte unterscheiden sich stark an ihrer Leistungsfähigkeit. Einfache Steuergeräte für Komfortfunktionen arbeiten mit kleinen Mikrocontrollern und wenige Kilobyte Speicher @reif2014automobilelektronik. Steuergeräte für Motor, Fahrwerk oder Fahrerassistenz verfügen über deutlich leistungsfähiger Prozessoren. Zentrale Hochleistungsrechner, englisch #gls("HPC"), bündeln Funktionen, die bisher auf viele einzelne Steuergeräte verteilt waren @jiang2024sdv.
+
+Zur Absicherung kryptografischer Schlüssel werden in Steuergeräten zunehmend spezielle Sicherheitsbausteine eingesetzt sogenannte #gls("HSM"). Ein HSM ist ein abgeschotteter Bereich auf dem Chip mit eigenem Speicher, der Schlüssel aufbewahrt und kryptografische Operationen selbst ausführt. Die Anwendungssoftware kann das HSM beauftragen, eine Nachricht zu signieren oder zu prüfen, ohne selbst Zugriff auf den Schlüssel zu erhalten. Daraus folgt, eine kompromittierte Anwendugnssoftware kann den Schlüssel nicht auslesen, das HSM selbst jedoch weiterhin für ihre Zwecke benutzen. Grundlegend hierfür war das europäische Forschungsprojekt EVITA, das drei Klassen solcher Module definierte: Full, Medium und Light . Sie unterschieden sich im Funktionsumfang und erlauben es, unterschiedliche Kosten- und Sicherheitsanforderungen zu erfüllen @evita2011summary. Auf die Funktionsweise von HSM und Secure Boot geht @ch:standards[Kapitel] ein.
+
+=== Softwarearchitektur
+
+Die Software moderner Steuergeräte folgt in weiten Teilen dem Standard #gls("AUTOSAR"). Dieser trennt die Anwendungssoftware von einer standardisierten Basissoftware, die Betriebssystem, Kommunikationsdienste, Diagnosefunktionen und Hardwareabstraktion bereitstellt. Eine Laufzeitumgebung verbindet die Softwarekomponenten miteinander und mit der Basissoftware. In einem vereinfachten Beispiel erhält eine Softwarekomponente zu Ansteuerung des Bremslichts über diese Laufzeitumgeung das Signal "Bremspedal betätigt", ohne wissen zu müssen ob es von einem anderen Teil desselben Steuergeräts oder über einen Bus von einem anderen Steuergerät stammt. Die Standardisierung erleichtert es, Softwarekomponenten verschiedener Zulieferer auf einem Steuergerät zu kombinieren und auf andere Hardware zu übertragen @zimmermann2014bussysteme.
+
+AUTOSAR umfasst heute zwei Plattformen @autosar2024adaptive. Die Classic Platform ist für tief eingebettete Steuergeräte mit harten Echtzeitanforderungen ausgelegt. Ihre gesamte Konfiguration wird zur Entwicklungszeit festgelegt, das Betriebssystem basiert auf dem Standard OSEK/VDX @zimmermann2014bussysteme. Die Adaptive Plattform wurde für Hochleistungsrechner entwickelt. Sie basiert auf einem POSIX-konformen Betriebssystem, nutzt eine dienstorientierte Kommunikation und unterstützt Anwendungen, die zur Laufzeit geladen und aktualisiert werden können. In heutigen Fahrzeugen existieren beide Plattformen nebeneinander @autosar2024adaptive.
+
+Die Standartisierung hat eine Kehrseite, die für die Sicherheitsbetrachtung relevant ist. Ziel von AUTOSAR ist es, Softwarekomponenten herstellerübergreifend wiederverwenden zu können @zimmermann2014bussysteme. Wird dieselbe Komponente in Fahrzeugen mehrere Hersteller eingesetzt, betrifft eine Schwachstelle oder ein eingeschleuster Schadcode darin potenziell eine große Zahl von Fahrzeugen unterschiedlicher Marken statt eines einzelnen Fahrzeugmodells
+
+=== Entwicklung der Architekturformen
+
+Die Anordnung der Steuergeräte hat sich in mehreren Stufen entwickelt @jiang2024sdv @khamis2025rethinking. @tab:architekturen fasst die Stufen zusammen.
+
+#figure(
+  caption: [Entwicklungsstufen der E/E-Architektur (eigene Darstellung nach @jiang2024sdv @khamis2025rethinking)],
+  dhbw-table(
+    columns: (auto, 1fr, 1fr),
+    align: (left, left, left),
+    table.header([*Architektur*], [*Gliederungsprinzip*], [*Merkmale*]),
+    [Verteilt], [ein Steuergerät je Funktion], [viele Steuergeräte, hoher Verkabelungsaufwand, enge Kopplung von Hardware und Software],
+    [Domänenorientiert], [Gruppierung nach Funktionsbereichen], [Domänensteuergeräte je Bereich, zentrales Gateway zwischen den Domänen],
+    [Zonal], [Gruppierung nach Einbauort], [Zonensteuergeräte als Ein- und Ausgabeknoten, Funktionslogik auf zentralen Rechnern],
+  ),
+) <tab:architekturen>
+
+
 == Bussysteme <sec:bussysteme>
 == Sensoren <sec:sensoren>
 == Aktoren <sec:aktoren>
