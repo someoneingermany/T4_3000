@@ -3,8 +3,6 @@
 #import "glossary.typ": fachbegriffe
 #import "abkürzungen.typ": abkürzungen
 
-
-
 #show: clean-dhbw.with(
   title: "Car-Hacking: Wo endet Optimierung, wo beginnt rechtlich relevante Täuschung, und wer haftet?",
   authors: (
@@ -41,10 +39,11 @@
   
 )
 
-
-  
-
-
+#set page(margin: 2.5cm)
+#set text(size: 11.5pt)
+#set par(leading: 8pt, spacing: 19pt)
+#set figure.caption(separator: [ -- ])
+#show figure.caption: set text(size: 10pt)
 
 
   //  ---------------  Start der Arbeit  ---------------  //
