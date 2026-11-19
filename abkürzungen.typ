@@ -29,4 +29,17 @@
   (key: "UDS", short: "UDS", long: "Unified Diagnostic Services", group: "Abkürzungen"),
   (key: "DoIP", short: "DoIP", long: "Diagnostic communication over Internet Protocol", group: "Abkürzungen"),
   (key: "ODD", short: "ODD", long: "Operational Design Domain", group: "Abkürzungen"),
-)
+
+  // Kapitel 3
+  (key: "OBD", short: "OBD", long: "On-Board-Diagnose", group: "Abkürzungen"),
+  (key: "TCU", short: "TCU", long: "Telematics Control Unit", group: "Abkürzungen"),
+  (key: "PKES", short: "PKES", long: "Passive Keyless Entry and Start", group: "Abkürzungen"),
+  (key: "TPMS", short: "TPMS", long: "Tire Pressure Monitoring System", group: "Abkürzungen"),
+  (key: "CCS", short: "CCS", long: "Combined Charging System", group: "Abkürzungen"),
+  (key: "PLC", short: "PLC", long: "Powerline Communication", group: "Abkürzungen"),
+  (key: "EVCC", short: "EVCC", long: "Electric Vehicle Communication Controller", group: "Abkürzungen"),
+  (key: "SECC", short: "SECC", long: "Supply Equipment Communication Controller", group: "Abkürzungen"),
+  (key: "PKI", short: "PKI", long: "Public Key Infrastructure", group: "Abkürzungen"),
+  (key: "OCPP", short: "OCPP", long: "Open Charge Point Protocol", group: "Abkürzungen"),
+
+)  
