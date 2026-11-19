@@ -293,23 +293,23 @@ Diese Arbeit konzentriert sich auf die zweite Form. Physische Angriffe auf Senso
 
 == Aktoren <sec:aktoren>
 
-Aktoren setzen elektrische Steursingale in Bewegung oder Kraft um. Sie sind das Gegenstück zu den Sensoren. An ihnen wird eine Entscheidung der Software zur tatsächlichen Wirkung, wie beschleunigen, bremsen oder lenken. Aktoren entscheiden nicht selbst. Sie führen aus was die Software eines Steurgeräts vorgibt @reif2014automobilelektronik.
+Aktoren setzen elektrische Steuersignale in Bewegung oder Kraft um. Sie sind das Gegenstück zu den Sensoren. An ihnen wird eine Entscheidung der Software zur tatsächlichen Wirkung, wie beschleunigen, bremsen oder lenken. Aktoren entscheiden nicht selbst. Sie führen aus, was die Software eines Steuergeräts vorgibt @reif2014automobilelektronik.
 
 === Antrieb
 
-Beim Verbrennungsmotor ist das Gaspedal seit Langem nicht mehr über einen Seilzug mit dem Motor verbunden. Stattdessen regelt eine elektronisch gesteuerte Drosselklappe die Leistung. Das Fahrpedal ist nur ein Sensor. Die Motorsteuerung wertet sein Signal aus und berechnet daraus das Motormoment unter Berücksichtung weiterer Größen. Bei Elektrofahrzeugen übernimmt diese Aufgabe die Leistungselektronik. Sie regelt den Strom für den Elektromotor @reif2014automobilelektronik.
+Beim Verbrennungsmotor ist das Gaspedal seit Langem nicht mehr über einen Seilzug mit dem Motor verbunden. Stattdessen regelt eine elektronisch gesteuerte Drosselklappe die Leistung. Das Fahrpedal ist nur ein Sensor. Die Motorsteuerung wertet sein Signal aus und berechnet daraus das Motormoment unter Berücksichtigung weiterer Größen. Bei Elektrofahrzeugen übernimmt diese Aufgabe die Leistungselektronik. Sie regelt den Strom für den Elektromotor @reif2014automobilelektronik.
 
-In beiden Fällen bestimmt die Software, wie das Fahrzeug auf das Fahrpedal reagiert. Sie kann die Leistung verringern, beispielsweise wenn das ESP eingreift. Die kann die Leistung auch erhöhen, ohne dass der Fahrer das Pedal betätigt, etwa beim Abstandsregeltempomaten. Wie viel Leistung ein Fahrzeug abruft, legt damit die Software fest @winner2024handbuch.
+In beiden Fällen bestimmt die Software, wie das Fahrzeug auf das Fahrpedal reagiert. Sie kann die Leistung verringern, beispielsweise wenn das ESP eingreift. Sie kann die Leistung auch erhöhen, ohne dass der Fahrer das Pedal betätigt, etwa beim Abstandsregeltempomaten. Wie viel Leistung ein Fahrzeug abruft, legt damit die Software fest @winner2024handbuch.
 
 === Lenkung
 
-Moderne Pkw's nutzen überwiegend elektromechanische Servolenkungen. Ein Elektromotor unterstützt den Fahrer beim Lenken. Die Höhe der Unterstützung wird von einem Steuergerät berechnet, in Abhängigkeit von Geschwindigkeit und Lenkmoment. Neben der Unterstützung kann der Elektromotor auch selbst lenken. Das nutzen Assistenzsysteme wie Spurhalteassistent oder der Einparkassistent @winner2024handbuch.
+Moderne Pkw nutzen überwiegend elektromechanische Servolenkungen. Ein Elektromotor unterstützt den Fahrer beim Lenken. Die Höhe der Unterstützung berechnet ein Steuergerät abhängig von Geschwindigkeit und Lenkmoment. Neben der Unterstützung kann der Elektromotor auch selbst lenken. Das nutzen Assistenzsysteme wie der Spurhalteassistent oder der Einparkassistent @winner2024handbuch.
 
-Bei einer klassischen Servolenkung sind Lenkrad und Räder weiterhin mechanisch verbunden. Fällt die Unterstützung aus, kann der Fahrer mit höherem Kraftaufwand weiterhin lenken @winner2024handbuch. Für Lenkeingriffe der Software stell die UN-Regelung Nr.~79 Anforderungen. Unter anderem muss der Fahrer einen solchen Eingriff übersteuern können @unece2025r79.  Wie stark die Software lenken darf, ist deshalb eine relevante Frage der Sicherheit
+Bei einer klassischen Servolenkung sind Lenkrad und Räder weiterhin mechanisch verbunden. Fällt die Unterstützung aus, kann der Fahrer mit höherem Kraftaufwand weiterhin lenken @winner2024handbuch. Für Lenkeingriffe der Software stellt die UN-Regelung Nr.~79 Anforderungen. Unter anderem muss der Fahrer einen solchen Eingriff übersteuern können @unece2025r79. Wie stark die Software lenken darf, ist deshalb eine Frage der Sicherheit.
 
 === Bremse
 
-Das Bremssystem eines Pkw arbeitet hydraulisch, also über Flüssigkeitsdruck. Für  ABS und ESP verfügt es über ein Hydroaggregat mit Ventilen und einer Pumpe. Damit lässt sich der Bremsdruck an jedem Rad einzeln aufbauen, halten und abbauen, unabhängig vom Fahrer. Auf diese Weise verhindert das ABS das Blockieren der Räder bei einer Vollbremsung. Das ESP nutzt dieselbe Technik, um einzelne Räder gezielt abzbremsen und ein Schleudern zu verhindern. Auch Notbremsassistent und Abstandsregeltempomat bremsen über dieses Aggregat @winner2024handbuch.
+Das Bremssystem eines Pkw arbeitet hydraulisch, also über Flüssigkeitsdruck. Für ABS und ESP verfügt es über ein Hydroaggregat mit Ventilen und einer Pumpe. Damit lässt sich der Bremsdruck an jedem Rad einzeln aufbauen, halten und abbauen, unabhängig vom Fahrer. Auf diese Weise verhindert das ABS das Blockieren der Räder bei einer Vollbremsung. Das ESP nutzt dieselbe Technik, um einzelne Räder gezielt abzubremsen und ein Schleudern zu verhindern. Auch Notbremsassistent und Abstandsregeltempomat bremsen über dieses Aggregat @winner2024handbuch.
 
 Bremskraftverstärker und Feststellbremse werden zunehmend elektrisch ausgeführt. Bei der elektrischen Parkbremse ziehen Elektromotoren die hinteren Bremsen an, sobald ein Steuergerät den Befehl gibt. Elektrofahrzeuge bremsen zum Teil über den Elektromotor, der dabei als Generator Strom erzeugt. Die Software verteilt die Bremswirkung dann auf Elektromotor und Reibbremse. Der Fahrer soll davon nichts merken @winner2024handbuch.
 
@@ -326,23 +326,23 @@ Neben Antrieb, Lenkung und Bremse sind weitere Aktoren für die Sicherheit wicht
 
 === X-by-Wire und Rückfallebenen
 
-Diese Entwicklung geht mit sogenannten X-by-Wire-Systemen weiter. Bei ihnen gibt es keine mechanische oder hydraulische Verbindung mehr zwischen Bedienelement und Aktor. Ein elektrisches Signal ersetzt sie vollständig @winner2024handbuch. Beim Fahrpedal st das seit Langem üblich @reif2014automobilelektronik.
+Diese Entwicklung geht mit sogenannten X-by-Wire-Systemen weiter. Bei ihnen gibt es keine mechanische oder hydraulische Verbindung mehr zwischen Bedienelement und Aktor. Ein elektrisches Signal ersetzt sie vollständig @winner2024handbuch. Beim Fahrpedal ist das seit Langem üblich @reif2014automobilelektronik.
 
-Bei einer Steer-by-Wire-Lenkung läuft das so ab: Ein Sensor misst, wie weit der Fahrer das Lenkrad dreht. Ein Steuergerät berechnet daraus den Lenkeinschlag der Räder und ein Elektromotor, welcher sich an der Vorderachse befindet, stell diesen Einschlag ein. Eine Lenksäule zwischen Lenkrad und Rädern gibt es nicht mehr. Das Gefühl beim Lenken erzeugt ein weiterer Motor am Lenkrad künstlich. Die UN-Regelung Nr.~79 erlaubt solche Lenkungen ohne mechanische Verbindung . Sie müssen dementsprechend hohe Anforderungen an Redundanz und Fehlerraktion erfüllen @unece2025r79.
+Bei einer Steer-by-Wire-Lenkung läuft das so ab: Ein Sensor misst, wie weit der Fahrer das Lenkrad dreht. Ein Steuergerät berechnet daraus den Lenkeinschlag der Räder und ein Elektromotor an der Vorderachse stellt diesen Einschlag ein. Eine Lenksäule zwischen Lenkrad und Rädern gibt es nicht mehr. Das Gefühl beim Lenken erzeugt ein weiterer Motor am Lenkrad künstlich. Die UN-Regelung Nr.~79 erlaubt solche Lenkungen ohne mechanische Verbindung. Sie müssen dafür hohe Anforderungen an Redundanz und Fehlerreaktion erfüllen @unece2025r79.
 
 Mit jedem Schritt in Richtung X-by-Wire fällt ein Stück mechanischer Rückfallebene weg. Bei Steer-by-Wire hängt das Lenken von Elektronik und Software ab. Damit das System trotzdem sicher bleibt, sind Sensoren, Steuergeräte und Stromversorgung mehrfach vorhanden @winner2024handbuch. Diese mehrfache Auslegung heißt Redundanz. Die Anforderungen an solche sicherheitsrelevanten Systeme legt die Normenreihe ISO~26262 fest @iso26262-1. Sie wird in @ch:standards[Kapitel] näher erläutert.
 
-Redundanz schützt vor allem gegen zufällige Hardwarefehler, beispielsweise einen defekten Sensor. Gegen Fehler mit gemeinsamer Ursache hilft sie nur begrenzt. Das sind Fehler, die mehrere Teile gleichzeitig treffen. Die ISO~26262 behandel sie als eigene Fehlerart @iso26262-1. Ein Beispiel dazu wäre: Laufen beide Kanäle einer redundanten Lenkung mit derselben Software, wirkt eine Manipulation dieser Software auf beide Kanäle gleichzeitig. Daraus schlussfolgernd bedeutet das, ein Fahrzeug bleibt nicht beherrschbar ohne sichere Software.
+Redundanz schützt vor allem gegen zufällige Hardwarefehler, beispielsweise einen defekten Sensor. Gegen Fehler mit gemeinsamer Ursache hilft sie nur begrenzt. Das sind Fehler, die mehrere Teile gleichzeitig treffen. Die ISO~26262 behandelt sie als eigene Fehlerart @iso26262-1. Laufen etwa beide Kanäle einer redundanten Lenkung mit derselben Software, wirkt eine Manipulation dieser Software auf beide Kanäle gleichzeitig. Ohne sichere Software bleibt ein Fahrzeug also auch mit redundanter Hardware nicht beherrschbar.
 
 == Fahrerassistenz und automatisiertes Fahren <sec:adas>
 
-Fahrerassistenzsysteme, international als #gls("ADAS") bezeichnet, verbinden Sensoren, Software und Aktoren zu einer Funktion. Sie werten die Umfeldsensoren aus, entscheiden in Software und greifen über Aktoren in  das Fahren ein @winner2024handbuch. Je stärker die Automatisierung, desto mehr Aufgaben übernehmen sie, die bisher der Mensch erledigt hat @sae2021j3016.
+Fahrerassistenzsysteme, international als #gls("ADAS") bezeichnet, verbinden Sensoren, Software und Aktoren zu einer Funktion. Sie werten die Umfeldsensoren aus, entscheiden in Software und greifen über Aktoren in das Fahren ein @winner2024handbuch. Je stärker die Automatisierung, desto mehr Aufgaben übernehmen sie, die bisher der Mensch erledigt hat @sae2021j3016.
 
 === Begriffe und Stufen der Automatisierung
 
-Zur Einordung dient die Norm SAE~J3016. Sie wurde gemeinsam mit der ISO erarbeitet. Sie unterscheidet sechs Stufen der Automatisierung. Von Stufe~0 ohne Automatisierung bis Stufe~5 mit vollständiger Automatisierung. Entscheidend dabei ist, ob der Mensch oder das System die dynamische Fahraufgabe übernimmt. Zur dynamischen Fahraufgabe gehören Gas geben, Bremsen, Lenken, Beobachtung der Umgebung und die Reaktion auf Ereignisse.
+Zur Einordnung dient die Norm SAE~J3016, die gemeinsam mit der ISO erarbeitet wurde. Sie unterscheidet sechs Stufen der Automatisierung, von Stufe~0 ohne Automatisierung bis Stufe~5 mit vollständiger Automatisierung. Entscheidend dabei ist, ob der Mensch oder das System die dynamische Fahraufgabe übernimmt. Zur dynamischen Fahraufgabe gehören Gas geben, Bremsen, Lenken, Beobachtung der Umgebung und die Reaktion auf Ereignisse.
 
-Von Bedeutung sind zwei weitere Begriffe. Der Einsatzbereich englisch #gls("ODD"), dieser beschreibt die Bedungen unter denen ein System arbeiten darf @sae2021j3016. Ein Stauassistent ist beispielsweise nur auf Autobahnen, bei Tageslicht, auf trockener Fahrbahn und bis zu einer bestimmten Geschwindigkeit freigegeben. Verlässt das Fahrzeug diesen Bereich, muss das System die Fahraufgabe abgeben. Die Rückfallebene beschreibt, wer reagiert, wenn das System an seine Grenzen kommt @sae2021j3016. @tab:sae-level fasst die Stufen zusammen.
+Zwei weitere Begriffe sind wichtig. Der Einsatzbereich, englisch #gls("ODD"), beschreibt die Bedingungen, unter denen ein System arbeiten darf @sae2021j3016. Ein Stauassistent ist beispielsweise nur auf Autobahnen, bei Tageslicht, auf trockener Fahrbahn und bis zu einer bestimmten Geschwindigkeit freigegeben. Verlässt das Fahrzeug diesen Bereich, muss das System die Fahraufgabe abgeben. Die Rückfallebene beschreibt, wer reagiert, wenn das System an seine Grenzen kommt @sae2021j3016. @tab:sae-level fasst die Stufen zusammen.
 
 #figure(
   caption: [Stufen der Fahrautomatisierung (eigene Darstellung nach @sae2021j3016)],
@@ -359,25 +359,25 @@ Von Bedeutung sind zwei weitere Begriffe. Der Einsatzbereich englisch #gls("ODD"
   ),
 ) <tab:sae-level>
 
-Zur Veranschaulichung: Ein einzelner Abstandsregeltempomat,der Geschwindigkeit und Abstand zum Vorderfahrzeug regelt, entspricht Stufe~1. Wird er mit einem Spurhalteassistenten kombiniert, der gleichzeitig lenkt, ist das Stufe~2. Ein Stauassistent, bei dem der Fahrer im Stau die Hände vom Lenkrad nehmen und sich anderen Tätigkeiten zuwenden darf, ist ein System der Stufe~3 @sae2021j3016 @mercedes2021drivepilot.
+Ein einzelner Abstandsregeltempomat, der Geschwindigkeit und Abstand zum Vorderfahrzeug regelt, entspricht etwa Stufe~1. Wird er mit einem Spurhalteassistenten kombiniert, der gleichzeitig lenkt, ist das Stufe~2. Ein Stauassistent, bei dem der Fahrer im Stau die Hände vom Lenkrad nehmen und sich anderen Tätigkeiten zuwenden darf, ist ein System der Stufe~3 @sae2021j3016 @mercedes2021drivepilot.
 
-Bis Stufe 2 bleibt der Mensch somit für die Überwachung verantwortlich und muss jederzeit eingreifen können. Ab Stufe~3 übernimmt das System die dynamische Fahraufgabe innerhalb seines Einsatzbereichs. Der Mensch muss das System nicht mehr fortlaufend überwachen, jedoch auf eine Übernahmeaufforderung reagieren müssen.
+Bis Stufe~2 bleibt der Mensch somit für die Überwachung verantwortlich und muss jederzeit eingreifen können. Ab Stufe~3 übernimmt das System die dynamische Fahraufgabe innerhalb seines Einsatzbereichs. Der Mensch muss das System nicht mehr fortlaufend überwachen, aber auf eine Übernahmeaufforderung reagieren.
 
-Aktive Sicherheitssystem wie das ESP oder Notbremsassistent sind nach SAE~J3016 keine Fahrautomatisierung. Sie greifen kurzzeitig in Gefahrensituationen ein und verändern die Rolle des Fahrers nicht @sae2021j3016.
+Aktive Sicherheitssysteme wie das ESP oder der Notbremsassistent sind nach SAE~J3016 keine Fahrautomatisierung. Sie greifen kurzzeitig in Gefahrensituationen ein und verändern die Rolle des Fahrers nicht @sae2021j3016.
 
 === Funktionsweise
 
-Unabhängig von der Stufe arbeiten alle Assistenzsystem nach demselben Muster #cite(form: "prose", <petit2015remote>) beschreiben es in drei Schritten:
+Unabhängig von der Stufe arbeiten alle Assistenzsysteme nach demselben Muster, das #cite(form: "prose", <petit2015remote>) in drei Schritten beschreiben:
 
 + *Wahrnehmen:* Sensoren erfassen Daten über die Umgebung und das eigene Fahrzeug.
 + *Verstehen und Planen:* Die Software erkennt Objekte, führt die Daten zu einem Bild der Umgebung zusammen, bewertet die Lage und plant das weitere Vorgehen, beispielsweise eine Ausweichbahn oder eine Bremsung.
 + *Handeln:* Antrieb, Bremse und Lenkung setzen den Plan um @petit2015remote.
 
-Alle drei Schritte hängen von einer Software ab. Daraus folgt, jeder Schritt lässt sich über ein Update verändern. Für die Analyse in @ch:analyse[Kapitel] bietet dieses Muster eine Struktur. Eine Manipulation kann in der Wahrnehmung, Entscheidung oder in der Ansteuerung der Aktoren passieren und jeweils unterschiedliche Folgen haben.
+Alle drei Schritte hängen von Software ab und lassen sich damit über ein Update verändern. Für die Analyse in @ch:analyse[Kapitel] liefert das Muster deshalb eine Gliederung: Eine Manipulation kann in der Wahrnehmung, in der Entscheidung oder in der Ansteuerung der Aktoren ansetzen und jeweils unterschiedliche Folgen haben.
 
 === Verpflichtende Assistenzsysteme
 
-In der EU sind Assistenzsysteme keine Sonderausstattung mehr. Die Verordnung (EU) 2019/2144 schreibt eine Reihe sicherheitsrelevanter Systeme vor. Dazu gehören unter anderem ein Notbremsassistent, ein Notfall-Spurhalteassistent, ein intelligenter Geschwindigkeitsassistent, eine Warnung bei Müdigkeit und nachlassender Aufmerksamkeit, ein Notbremslicht, ei Rückfahrtassistent und eine ereignisbezogene Datenaufzeichnung @eu2019gsr @bmv2024fahrzeugsicherheit. Der intelligente Geschwindigkeitsassistent unterstützt den Fahrer beim Einhalten der zulässigen Höchstgeschwindigkeit. Der Notfall-Spurhalteassistent greift ein, wenn das Fahrzeug unbeabsichtigt die Fahrspur zu verlassen droht, zunächst mit einer Warnung und nötigenfalls mit einem Lenkeingriff. Der Notbremsassistent erkennt Hindernisse und leitet selbstständig eine Bremsung ein, wenn der Fahrer nicht rechtzeitig reagiert @bmv2024fahrzeugsicherheit. Die Systeme werden schrittweise eingeführt. @tab:gsr-stufen zeigt den Zeitplan.
+In der EU sind Assistenzsysteme keine Sonderausstattung mehr. Die Verordnung (EU) 2019/2144 schreibt eine Reihe sicherheitsrelevanter Systeme vor. Dazu gehören unter anderem ein Notbremsassistent, ein Notfall-Spurhalteassistent, ein intelligenter Geschwindigkeitsassistent, eine Warnung bei Müdigkeit und nachlassender Aufmerksamkeit, ein Notbremslicht, ein Rückfahrassistent und eine ereignisbezogene Datenaufzeichnung @eu2019gsr @bmv2024fahrzeugsicherheit. Der intelligente Geschwindigkeitsassistent unterstützt den Fahrer beim Einhalten der zulässigen Höchstgeschwindigkeit. Der Notfall-Spurhalteassistent greift ein, wenn das Fahrzeug unbeabsichtigt die Fahrspur zu verlassen droht, zunächst mit einer Warnung und nötigenfalls mit einem Lenkeingriff. Der Notbremsassistent erkennt Hindernisse und leitet selbstständig eine Bremsung ein, wenn der Fahrer nicht rechtzeitig reagiert @bmv2024fahrzeugsicherheit. Die Systeme werden schrittweise eingeführt. @tab:gsr-stufen zeigt den Zeitplan.
 
 #figure(
   caption: [Zeitstufen der Verordnung (EU) 2019/2144 (eigene Darstellung nach @bmv2024fahrzeugsicherheit)],
@@ -396,13 +396,13 @@ Notbremsassistent, Notfall-Spurhalteassistent und Geschwindigkeitsassistent sind
 
 === Automatisiertes und autonomes Fahren
 
-Für Systeme der Stufe~3 gilt die UN-Regelung Nr.157 über automatisierte Spurhaltesystemw, englisch #gls("ALKS"). Sie ist die Grundlage für die Typgenehmigung solcher Systeme. Diese Systeme halten das Fahrzeug über längere Zeit in der Spur. Es übernimmt dabei Gasgeben, Bremsen und Lenken ohne Eingaben des Fahrers. Anfang erlaubte die Regelung höchstens 60~km/h @unece2021r157. Seit einer Änderung, die am 4.~Januar~2023 in Kraft trat, sind 130~km/h und automatische Spurwechsel erlaubt @unece2022r157amend. Außerdem muss ein Datenspeicher festhalten, wann das System aktiv war @unece2021r157. Seit der Änderung speichert er auch, wann das System selbst die Spur gewechselt hat @unece2022r157amend.
+Für Systeme der Stufe~3 gilt die UN-Regelung Nr.~157 über automatisierte Spurhaltesysteme, englisch #gls("ALKS"). Sie ist die Grundlage für die Typgenehmigung solcher Systeme. Ein solches System hält das Fahrzeug über längere Zeit in der Spur und übernimmt dabei Gasgeben, Bremsen und Lenken ohne Eingaben des Fahrers. Anfangs erlaubte die Regelung höchstens 60~km/h @unece2021r157. Seit einer Änderung, die am 4.~Januar~2023 in Kraft trat, sind 130~km/h und automatische Spurwechsel erlaubt @unece2022r157amend. Außerdem muss ein Datenspeicher festhalten, wann das System aktiv war @unece2021r157. Seit der Änderung speichert er auch, wann das System selbst die Spur gewechselt hat @unece2022r157amend.
 
 Im Dezember 2021 erteilte das Kraftfahrt-Bundesamt auf Grundlage der UN-Regelung Nr.~157 die erste Systemgenehmigung für ein solches System, den Drive Pilot von Mercedes-Benz @mercedes2021drivepilot. 
-Das deutsche Straßenverkehrsrecht wurde in zwei Schritten angepasst. 2017 kamen die §§~1a und 1b in das #gls("StVG"). Sie regeln den Betriebs von Kraftfahrzeugen mit hoch- oder vollautomatiserter Fahrfunktion sowie die Rechte und Pflichten des Fahrzeugführers bei deren Nutzung. Mit dem Gesetz zum autonomen Fahren folgten 2021 die §§~1d bis 1l StVG @stvg2017aenderung @stvg2021autonom. Ein Kraftfahrzeug mit autonomer Fahrfunktion ist danach ein Fahrzeug, dass in einem festgelegten Bereich ohne Fahrer selbständig fahren kann @stvg. Inhaltlich entspricht diese Definition weitgehen der Stufe~4 nach SAE~J3016, bei der innerhlab des Einsatzbereichs keine Rückfallebene durch einen Menschen erforderlich ist @sae2021j3016.
+Das deutsche Straßenverkehrsrecht wurde in zwei Schritten angepasst. 2017 kamen die §§~1a und 1b in das #gls("StVG"). Sie regeln den Betrieb von Kraftfahrzeugen mit hoch- oder vollautomatisierter Fahrfunktion sowie die Rechte und Pflichten des Fahrzeugführers bei deren Nutzung. Mit dem Gesetz zum autonomen Fahren folgten 2021 die §§~1d bis 1l StVG @stvg2017aenderung @stvg2021autonom. Ein Kraftfahrzeug mit autonomer Fahrfunktion ist danach ein Fahrzeug, das in einem festgelegten Bereich ohne Fahrer selbständig fahren kann @stvg. Inhaltlich entspricht diese Definition weitgehend der Stufe~4 nach SAE~J3016, bei der innerhalb des Einsatzbereichs keine Rückfallebene durch einen Menschen erforderlich ist @sae2021j3016.
 
 Je höher die Automatisierung, desto mehr Kontrolle geht vom Menschen auf die Software über. Auf Stufe~3 muss der Fahrer das System nicht mehr dauerhaft überwachen. Auf Stufe~4 ist im Einsatzbereich kein Fahrer mehr vorgesehen @sae2021j3016.
-Daraus kann man schlussfolgern, eine Fehlfunktion der Software fällt unter Umständen erst auf, wenn das Fahrzeug bereits falsch reagiert hat. Auf Stufe~4 kann sie im Einsatzbereich nicht mehr durch einen Menschen korrigiert werden. Dieser Umstand ist sowohl für die technische Bewertung in @ch:analyse[Kapitel] als auch für die Frage nach der Verantwortung von Halter, Fahrer und Hersteller in @ch:rechtliche[Kapitel] von Bedeutung.
+Eine Fehlfunktion der Software fällt damit unter Umständen erst auf, wenn das Fahrzeug bereits falsch reagiert hat. Auf Stufe~4 kann sie im Einsatzbereich nicht mehr durch einen Menschen korrigiert werden. Dieser Umstand ist sowohl für die technische Bewertung in @ch:analyse[Kapitel] als auch für die Frage nach der Verantwortung von Halter, Fahrer und Hersteller in @ch:rechtliche[Kapitel] von Bedeutung.
 
 == Zwischenfazit <sec:grundlagen-zwischenfazit>
 
@@ -412,9 +412,9 @@ Dieses Kapitel hat gezeigt, dass die meisten sicherheitsrelevanten Funktionen ei
 
 + *Die Software stammt aus einer langen Lieferkette.* An der Software eines Fahrzeugs sind Hersteller, Zulieferer mehrerer Ebenen und weitere Softwareanbieter beteiligt. Standardisierte Basissoftware wird in Fahrzeugen vieler Hersteller eingesetzt.
 
-+ *Die Bordnetze vertrauen ihren Teilnehmern.* Klassische Bussystem wie CAN bieten keine Authentifizierung. Nachträgliche Schutzmaßnahmen wie SecOC schützen vor Angriffen von außen. Gegen ein Steuergerät, dessen Software selbst manipuliert wurde, wirken sie nicht.
++ *Die Bordnetze vertrauen ihren Teilnehmern.* Klassische Bussysteme wie CAN bieten keine Authentifizierung. Nachträgliche Schutzmaßnahmen wie SecOC schützen vor Angriffen von außen. Gegen ein Steuergerät, dessen Software selbst manipuliert wurde, wirken sie nicht.
 
-+ *Zentralisierung verstärkt die Wirkung einer Manipulation.* In zonalen Architekturen laufen Funktionen mehrerer Domänen auf wenigen Zentralrechnern. Eine manipulierte Software kann dort mehrere sicherheitsrelevante Funktionen gleichzeitig beeinlussen.
++ *Zentralisierung verstärkt die Wirkung einer Manipulation.* In zonalen Architekturen laufen Funktionen mehrerer Domänen auf wenigen Zentralrechnern. Eine manipulierte Software kann dort mehrere sicherheitsrelevante Funktionen gleichzeitig beeinflussen.
 
 + *Mechanische Rückfallebenen nehmen ab.* Mit X-by-Wire und zunehmender Automatisierung sinkt die Möglichkeit des Menschen, eine Fehlfunktion zu erkennen und zu korrigieren.
 
