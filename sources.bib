@@ -1,10 +1,3 @@
-@inproceedings{iso18004,
-  title     = {{ISO/IEC 18004: Information technology -- Automatic identification and data capture techniques -- QR code bar code symbology specification}},
-  booktitle = {ISO/IEC 18004:2015},
-  author    = {{International Organization for Standardization}},
-  year      = {2015},
-}
-
 % ---------------- Kapitel 1: Einleitung ----------------
 
 @techreport{miller2015remote,
@@ -19,10 +12,10 @@
 
 @misc{nhtsa2015recall,
   author       = {{National Highway Traffic Safety Administration}},
-  title        = {Recall 15V-461: Radio Software Security Vulnerabilities (FCA US LLC)},
+  title        = {Part 573 Safety Recall Report 15V-461 (FCA US LLC)},
 
   date         = {2015-07-24},
-  url          = {https://www.nhtsa.gov/recalls?nhtsaId=15V461000},
+  url          = {https://static.nhtsa.gov/odi/rcl/2015/RCLRPT-15V461-6333.PDF},
   urldate      = {2026-10-31},
 }
 
@@ -32,15 +25,16 @@
   institution = {Upstream Security Ltd.},
   type        = {Branchenbericht},
   year        = {2026},
-  url         = {https://upstream.auto/reports/global-automotive-cybersecurity-report/},
+  url         = {https://upstream.io/reports/global-automotive-cybersecurity-report/},
   urldate     = {2026-10-31},
 }
 
 @misc{devincenzi2024sdv,
-  author        = {De Vincenzi, Marco and Brooks, Richard R. and Hasan, Monowar and Saracino, Andrea and Hamad, Mohammad and Steinhorst, Sebastian and others},
-  title         = {Contextualizing Security and Privacy of Software-Defined Vehicles: State of the Art and Industry Perspectives},
+  author        = {De Vincenzi, Marco and Pesé, Mert D. and Bodei, Chiara and Matteucci, Ilaria and Brooks, Richard R. and Hasan, Monowar and Saracino, Andrea and Hamad, Mohammad and Steinhorst, Sebastian},
+  title         = {Contextualizing Security and Privacy of Software-Defined Vehicles: A Literature Review and Industry Perspectives},
 
   date         = {2024-11},
+  note          = {Version 4 vom 2. Mai 2026},
   eprint        = {2411.10612},
   archiveprefix = {arXiv},
   url           = {https://arxiv.org/abs/2411.10612},
@@ -48,7 +42,7 @@
 }
 
 @techreport{jiang2024sdv,
-  author      = {Jiang, S.},
+  author      = {Jiang, Shugang},
   title       = {Vehicle E/E Architecture and Key Technologies Enabling Software-Defined Vehicle},
   institution = {SAE International},
   type        = {SAE Technical Paper 2024-01-2035},
@@ -96,19 +90,9 @@
   urldate   = {2026-10-31},
 }
 
-@misc{unece2021r155,
-  author  = {{United Nations Economic Commission for Europe}},
-  title   = {UN Regulation No 155 -- Uniform provisions concerning the approval of vehicles with regards to cyber security and cyber security management system},
-
-  date         = {2021-03-09},
-  note    = {ABl. L 82 vom 9.3.2021, S. 30},
-  url     = {https://eur-lex.europa.eu/eli/reg/2021/387/oj},
-  urldate = {2026-10-31},
-}
-
 @misc{unece2021r156,
   author  = {{United Nations Economic Commission for Europe}},
-  title   = {UN Regulation No 156 -- Uniform provisions concerning the approval of vehicles with regards to software update and software updates management system},
+  title   = {UN-Regelung Nr. 156 -- Einheitliche Bestimmungen für die Genehmigung von Kraftfahrzeugen hinsichtlich der Softwareaktualisierung und des Softwareaktualisierungsmanagementsystems [2021/388]},
 
   date         = {2021-03-09},
   note    = {ABl. L 82 vom 9.3.2021, S. 60},
@@ -180,6 +164,33 @@
   urldate = {2026-10-31},
 }
 
+@misc{upstream2026pm,
+  author  = {{Upstream Security}},
+  title   = {Ransomware Attacks on Automotive and Smart Mobility More Than Doubled in 2025, According to New Research by Upstream Security},
+  date    = {2026-02-18},
+  note    = {Pressemitteilung},
+  url     = {https://upstream.io/press-releases/upstream-security-research-ransomware-attacks-on-automotive-and-smart-mobility-more-than-doubled-in-2025/},
+  urldate = {2026-11-19},
+}
+
+@misc{eu2022dv1398,
+  author  = {{Europäische Kommission}},
+  title   = {Delegierte Verordnung (EU) 2022/1398 der Kommission zur Änderung der Verordnung (EU) 2019/2144, um dem technischen Fortschritt und den regulatorischen Entwicklungen in Bezug auf die Änderungen der im Rahmen der Wirtschaftskommission der Vereinten Nationen für Europa angenommenen Regelungen für Fahrzeuge Rechnung zu tragen},
+  date    = {2022-06-08},
+  note    = {ABl. L 213 vom 16.8.2022, S. 1},
+  url     = {https://eur-lex.europa.eu/eli/reg_del/2022/1398/oj},
+  urldate = {2026-11-19},
+}
+
+@misc{eu2022dv2236,
+  author  = {{Europäische Kommission}},
+  title   = {Delegierte Verordnung (EU) 2022/2236 der Kommission zur Änderung der Anhänge I, II, IV und V der Verordnung (EU) 2018/858 in Bezug auf die technischen Anforderungen an in unbegrenzter Serie hergestellte Fahrzeuge, an in kleiner Serie hergestellte Fahrzeuge, an in kleiner Serie hergestellte vollautomatisierte Fahrzeuge und an Fahrzeuge mit besonderer Zweckbestimmung sowie in Bezug auf die Softwareaktualisierung},
+  date    = {2022-06-20},
+  note    = {ABl. L 296 vom 16.11.2022, S. 1},
+  url     = {https://eur-lex.europa.eu/eli/reg_del/2022/2236/oj},
+  urldate = {2026-11-19},
+}
+
 % ---------------- Kapitel 2: Technische Grundlagen ----------------
 
 @article{charette2009code,
@@ -210,6 +221,7 @@
   publisher = {IEEE},
   address   = {Oakland, CA},
   year      = {2010},
+  doi       = {10.1109/SP.2010.34},
 }
 
 @book{reif2014automobilelektronik,
@@ -219,6 +231,7 @@
   publisher = {Springer Vieweg},
   address   = {Wiesbaden},
   year      = {2014},
+  doi       = {10.1007/978-3-658-05048-1},
 }
 
 @book{reif2016sensoren,
@@ -229,6 +242,7 @@
   publisher = {Springer Vieweg},
   address   = {Wiesbaden},
   year      = {2016},
+  doi       = {10.1007/978-3-658-11211-0},
   isbn      = {978-3-658-11210-3},
 }
 
@@ -276,7 +290,7 @@
 
 @misc{unece2021r157,
   author  = {{United Nations Economic Commission for Europe}},
-  title   = {UN Regulation No 157 -- Uniform provisions concerning the approval of vehicles with regards to Automated Lane Keeping Systems},
+  title   = {UN-Regelung Nr. 157 -- Einheitliche Bedingungen für die Genehmigung von Fahrzeugen hinsichtlich des automatischen Spurhalteassistenzsystems (ALKS) [2021/389]},
   date    = {2021-03-09},
   note    = {ABl. L 82 vom 9.3.2021, S. 75},
   url     = {https://eur-lex.europa.eu/eli/reg/2021/389/oj},
@@ -285,8 +299,9 @@
 
 @misc{unece2025r79,
   author  = {{United Nations Economic Commission for Europe}},
-  title   = {UN Regulation No 79 -- Uniform provisions concerning the approval of vehicles with regard to steering equipment},
+  title   = {UN-Regelung Nr. 79 -- Einheitliche Bedingungen für die Genehmigung der Fahrzeuge hinsichtlich der Lenkanlage [2025/3]},
   date    = {2025-01-10},
+  note    = {ABl. L, 2025/3 vom 10.1.2025; Fassung einschließlich Ergänzung 6 zur Änderungsserie 04},
   url     = {https://eur-lex.europa.eu/eli/reg/2025/3/oj},
   urldate = {2026-10-31},
 }
@@ -484,7 +499,8 @@
 @misc{cia2026can,
   author  = {{CAN in Automation (CiA)}},
   title   = {History of CAN technology},
-  url     = {https://www.can-cia.org/can-knowledge/can/can-history},
+  note    = {ohne Datum},
+  url     = {https://www.can-cia.org/can-knowledge/history-of-can-technology},
   urldate = {2026-11-02},
 }
 
@@ -523,10 +539,7 @@
   urldate = {2026-11-02},
 }
 
-% ---------------- Ältere Quellen (in eurer hochgeladenen Fassung von Kapitel 2 noch verwendet) ----------------
-% In der überarbeiteten Fassung ersetzt durch: autosar2025cplsa, iso14229-1, iso11898-1,
-% iso17987-1, iso17458-1, aliwa2021cyberattacks, cia2026can (statt zimmermann2014bussysteme),
-% autosar2025apswarch (statt autosar2024adaptive) und winner2024handbuch (statt reif2010fahrstabilisierung).
+% ---------------- Weiterhin verwendete Lehrbücher ----------------
 
 @book{zimmermann2014bussysteme,
   author    = {Zimmermann, Werner and Schmidgall, Ralf},
@@ -535,26 +548,9 @@
   publisher = {Springer Vieweg},
   address   = {Wiesbaden},
   year      = {2014},
+  doi       = {10.1007/978-3-658-02419-2},
   isbn      = {978-3-658-02418-5},
 }
-
-@misc{autosar2024adaptive,
-  author  = {{AUTOSAR}},
-  title   = {Explanation of Adaptive Platform Design (Document ID 706, Release R19-11)},
-  date    = {2019-11},
-  url     = {https://www.autosar.org/fileadmin/standards/R19-11/AP/AUTOSAR_EXP_PlatformDesign.pdf},
-  urldate = {2026-10-31},
-}
-
-@book{reif2010fahrstabilisierung,
-  editor    = {Reif, Konrad},
-  title     = {Fahrstabilisierungssysteme und Fahrerassistenzsysteme},
-  series    = {Bosch Fachinformation Automobil},
-  publisher = {Vieweg+Teubner},
-  address   = {Wiesbaden},
-  year      = {2010},
-}
-
 
 % ---------------- Kapitel 3: Schnittstellen und Angriffsflächen ----------------
  
@@ -566,8 +562,7 @@
   institution = {U.S. Department of Commerce},
   date        = {2020-09},
   doi         = {10.6028/NIST.SP.800-53r5},
-  url         = {https://csrc.nist.gov/glossary/term/attack_surface},
-  note        = {Definition „attack surface“ nach NIST-Glossar},
+  url         = {https://doi.org/10.6028/NIST.SP.800-53r5},
   urldate     = {2026-11-17},
 }
  
@@ -646,6 +641,7 @@
   publisher = {The Internet Society},
   year      = {2023},
   url       = {https://www.ndss-symposium.org/ndss-paper/brokenwire-wireless-disruption-of-ccs-electric-vehicle-charging},
+  doi       = {10.14722/ndss.2023.23251},
   eprint    = {2202.02104},
   archiveprefix = {arXiv},
   urldate   = {2026-11-17},
@@ -678,13 +674,6 @@
   urldate     = {2026-11-17},
 }
  
-@misc{ioactive2015advisory,
-  author  = {Valasek, Chris and Miller, Charlie},
-  title   = {IOActive Security Advisory: Harman-Kardon UConnect Vulnerability},
-  date    = {2015-09-28},
-  url     = {https://www.ioactive.com/wp-content/uploads/2018/05/IOActive_Advisory_Harman-Kardon.pdf},
-  urldate = {2026-11-17},
-}
  
 @misc{iso15118-20,
   author  = {{International Organization for Standardization}},
@@ -696,24 +685,25 @@
  
 @misc{unece2025r155,
   author  = {{United Nations Economic Commission for Europe}},
-  title   = {UN Regulation No 155 -- Uniform provisions concerning the approval of vehicles with regard to cyber security and cyber security management system [2025/5]},
-  year    = {2025},
-  note    = {ABl. L, 2025/5; Anhang 5, Teil A},
+  title   = {UN-Regelung Nr. 155 -- Einheitliche Bedingungen für die Genehmigung von Fahrzeugen hinsichtlich der Cybersicherheit und des Cybersicherheitsmanagementsystems [2025/5]},
+  date    = {2025-01-10},
+  note    = {ABl. L, 2025/5 vom 10.1.2025; Fassung einschließlich Ergänzung 3 zur ursprünglichen Fassung},
   url     = {https://eur-lex.europa.eu/eli/reg/2025/5/oj},
   urldate = {2026-11-17},
 }
  
 @misc{eu1998obd,
   author  = {{Europäisches Parlament und Rat der Europäischen Union}},
-  title   = {Directive 98/69/EC relating to measures to be taken against air pollution by emissions from motor vehicles and amending Council Directive 70/220/EEC},
+  title   = {Richtlinie 98/69/EG über Maßnahmen gegen die Verunreinigung der Luft durch Emissionen von Kraftfahrzeugen und zur Änderung der Richtlinie 70/220/EWG des Rates},
   date    = {1998-10-13},
+  note    = {ABl. L 350 vom 28.12.1998, S. 1},
   url     = {https://eur-lex.europa.eu/eli/dir/1998/69/oj},
   urldate = {2026-11-17},
 }
  
 @misc{eu1999obd,
   author  = {{Europäische Kommission}},
-  title   = {Commission Directive 1999/102/EC adapting to technical progress Council Directive 70/220/EEC relating to measures to be taken against air pollution by emissions from motor vehicles},
+  title   = {Richtlinie 1999/102/EG der Kommission zur Anpassung der Richtlinie 70/220/EWG des Rates über Maßnahmen gegen die Verunreinigung der Luft durch Emissionen von Kraftfahrzeugen an den technischen Fortschritt},
   date    = {1999-12-15},
   note    = {ABl. L 334 vom 28.12.1999, S. 43},
   url     = {https://eur-lex.europa.eu/eli/dir/1999/102/oj},
@@ -722,7 +712,7 @@
  
 @misc{eu2015ecall,
   author  = {{Europäisches Parlament und Rat der Europäischen Union}},
-  title   = {Regulation (EU) 2015/758 concerning type-approval requirements for the deployment of the eCall in-vehicle system based on the 112 service and amending Directive 2007/46/EC},
+  title   = {Verordnung (EU) 2015/758 über Anforderungen für die Typgenehmigung zur Einführung des auf dem 112-Notruf basierenden bordeigenen eCall-Systems in Fahrzeugen und zur Änderung der Richtlinie 2007/46/EG},
   date    = {2015-04-29},
   note    = {ABl. L 123 vom 19.5.2015, S. 77},
   url     = {https://eur-lex.europa.eu/eli/reg/2015/758/oj},
@@ -731,16 +721,16 @@
  
 @misc{eu2018typgenehmigung,
   author  = {{Europäisches Parlament und Rat der Europäischen Union}},
-  title   = {Regulation (EU) 2018/858 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles},
+  title   = {Verordnung (EU) 2018/858 über die Genehmigung und die Marktüberwachung von Kraftfahrzeugen und Kraftfahrzeuganhängern sowie von Systemen, Bauteilen und selbstständigen technischen Einheiten für diese Fahrzeuge},
   date    = {2018-05-30},
-  note    = {Anhang X},
+  note    = {ABl. L 151 vom 14.6.2018, S. 1},
   url     = {https://eur-lex.europa.eu/eli/reg/2018/858/oj},
   urldate = {2026-11-17},
 }
  
 @misc{eu2021sermi,
   author  = {{Europäische Kommission}},
-  title   = {Commission Delegated Regulation (EU) 2021/1244 amending Annex X to Regulation (EU) 2018/858 as regards the standardised access to vehicle on-board diagnostics information and repair and maintenance information, and the requirements and procedures for access to vehicle security information},
+  title   = {Delegierte Verordnung (EU) 2021/1244 der Kommission zur Änderung des Anhangs X der Verordnung (EU) 2018/858 hinsichtlich des standardisierten Zugangs zu Fahrzeug-OBD-Informationen und zu Reparatur- und Wartungsinformationen sowie der Anforderungen und Verfahren für den Zugang zu Sicherheitsinformationen des Fahrzeugs},
   date    = {2021-05-20},
   note    = {ABl. L 272 vom 30.7.2021, S. 16},
   url     = {https://eur-lex.europa.eu/eli/reg_del/2021/1244/oj},
@@ -783,8 +773,9 @@
  
 @misc{eu2025afir,
   author  = {{Europäische Kommission}},
-  title   = {Commission Delegated Regulation (EU) 2025/656 amending Regulation (EU) 2023/1804 as regards standards for wireless recharging, electric road system, vehicle-to-grid communication and hydrogen supply},
+  title   = {Delegierte Verordnung (EU) 2025/656 der Kommission zur Änderung der Verordnung (EU) 2023/1804 im Hinblick auf Normen für das kabellose Aufladen, das elektrische Straßensystem, die Vehicle-to-Grid-Kommunikation und die Wasserstoffversorgung für Straßenfahrzeuge},
   date    = {2025-04-02},
+  note    = {ABl. L, 2025/656 vom 18.6.2025},
   url     = {https://eur-lex.europa.eu/eli/reg_del/2025/656/oj},
   urldate = {2026-11-17},
 }
@@ -848,7 +839,8 @@
   number    = {2},
   pages     = {20},
   year      = {2023},
-  url       = {https://old.can-cia.org/fileadmin/resources/documents/publications/cnlm_issues/june_2023/cnlm_23-2_p20_the_can_injection_attack_ken_tindel_canis_automotive_labs.pdf},
+  note      = {Fallbeschreibung auch im Blog des Autors, dort abgerufen},
+  url       = {https://kentindell.github.io/2023/04/03/can-injection/},
   urldate   = {2026-11-17},
 }
  

@@ -14,9 +14,9 @@ Das Kapitel legt den Schwerpunkt auf die Eigenschaften, die für die spätere Si
 
 Über Jahrzehnte war das Automobil ein überwiegend mechanisches System. Lenkung, Bremse und Gaspedal waren über Gestänge, Seilzüge oder Hydraulikleitungen mit den Rädern, der Bremsanlage und dem Motor verbunden @reif2014automobilelektronik.
 
-Das erste in Serie gefertigte Steuergerät mit Mikrocomputer war ein Einzelfunktionsgerät. Es regelte 1977 im Oldsmobile Toronado von General Motors den Zündzeitpunkt. Im Jahr 1981 setzte General Motors in seiner gesamten Pkw-Produktion für den heimischen Markt mikroprozessorgesteuerte Motorsteuerungen mit rund 50.000 Zeilen Programmcode ein. Anfangs dienten diese Steuergeräte vor allem dazu, Verbrauch und Emissionen zu senken @charette2009code. Mit dem Antiblockiersystem und später der Fahrdynamikregelung enthielt die Elektronik zunehmend auch sicherheitsrelevante Aufgaben @reif2010fahrstabilisierung.
+Das erste in Serie gefertigte Steuergerät mit Mikrocomputer war ein Einzelfunktionsgerät. Es regelte 1977 im Oldsmobile Toronado von General Motors den Zündzeitpunkt. Im Jahr 1981 setzte General Motors in seiner gesamten Pkw-Produktion für den heimischen Markt mikroprozessorgesteuerte Motorsteuerungen mit rund 50.000 Zeilen Programmcode ein. Getrieben wurde der Einsatz von Elektronik von den Zielen, Energie zu sparen, Emissionen zu senken und die Sicherheit zu erhöhen @charette2009code. Mit dem Antiblockiersystem und später der Fahrdynamikregelung enthielt die Elektronik zunehmend auch sicherheitsrelevante Aufgaben @winner2024handbuch.
 
-Die Menge an Software stieg in der Folge stark an. Nach Einschätzung von Manfred Broy enthielt ein Fahrzeug der Oberklasse im Jahr 2009 annähernd 100 Millionen Zeilen Programmcode, die auf 70 bis 100 vernetzten Steuergeräten ausgeführt wurden. Die Software steuerte zu diesem Zeitpunkt Funktionen von der Bremse bis zur Lautstärke des Radios @charette2009code. #cite(form: "prose", <koscher2010experimental>) beschrieben moderne Fahrzeuge im Jahr 2010 nicht mehr als rein mechanische Geräte, sondern als Systeme, die von Dutzenden vernetzter Computer überwacht und gesteuert werden @koscher2010experimental.
+Die Menge an Software stieg in der Folge stark an. Nach Einschätzung von Manfred Broy enthielt ein Fahrzeug der Oberklasse im Jahr 2009 annähernd 100 Millionen Zeilen Programmcode, die auf 70 bis 100 vernetzten Steuergeräten ausgeführt wurden. Die Software steuerte zu diesem Zeitpunkt Funktionen von der Bremse bis zur Lautstärke des Radios @charette2009code. #cite(form: "prose", <koscher2010experimental>) beschrieben moderne Fahrzeuge im Jahr 2010 nicht mehr als rein mechanische Geräte, sondern als Systeme, die von Dutzenden vernetzter Computer überwacht und gesteuert werden.
 
 Diese Entwicklung folgte lange einem einfachen Muster. Dabei wurde für jede neue Funktion ein eigenes Steuergerät entwickelt, das ein Zulieferer mit Hardware und Software als geschlossene Einheit an den Fahrzeughersteller lieferte @jiang2024sdv @khamis2025rethinking. Hardware und Software waren eng aneinander gebunden @khamis2025rethinking. Eine Änderung der Funktion nach Auslieferung war dabei überwiegend auf die Werkstatt beschränkt, beispielsweise bei einem Rückruf @jiang2024sdv.
 
@@ -33,11 +33,11 @@ Zugleich benennen #cite(form: "prose", <khamis2025rethinking>) eine Reihe von He
 
 Zwei Eigenschaften unterscheiden das Fahrzeug grundlegend von anderen vernetzten Geräten: seine lange Nutzungsdauer und seine arbeitsteilige Herstellung.
 
-Zum 1.~Januar~2026 waren in Deutschland 9.486.487 Personenkraftwagen zugelassen. Ihr Durchschnittsalter lag bei 10,9~Jahren @kba2026bestand. Aus diesem Durchschnittsalter folgt, dass ein heute verkauftes Fahrzeug voraussichtlich über ein Jahrzehnt im Straßenverkehr bleibt. Dabei verlangt die UN-Regelung Nr.~155, dass das Cybersicherheitsmanagement des Herstellers auch die Phase nach der Produktion abdeckt und auf neue Bedrohungen und Schwachstellen reagiert @unece2021r155.
+Zum 1.~Januar~2026 waren in Deutschland 49.486.487 Personenkraftwagen zugelassen. Ihr Durchschnittsalter lag bei 10,9~Jahren @kba2026bestand. Aus diesem Durchschnittsalter folgt, dass ein heute verkauftes Fahrzeug voraussichtlich über ein Jahrzehnt im Straßenverkehr bleibt. Dabei verlangt die UN-Regelung Nr.~155, dass das Cybersicherheitsmanagement des Herstellers auch die Phase nach der Produktion abdeckt und auf neue Bedrohungen und Schwachstellen reagiert @unece2025r155.
 
 Die zweite Eigenschaft betrifft die Herkunft der Software. Ein Fahrzeughersteller, im Folgenden als #gls("OEM") bezeichnet, entwickelt einen Teil der Software selbst. Viele Steuergeräte werden von Zulieferern entwickelt, die als Tier-1-Zulieferer unmittelbar an den OEM liefern und ihrerseits Komponenten und Software von Tier-2-Zulieferern beziehen. Die Software eines Steuergeräts wird häufig vom Zulieferer gepflegt und an den OEM übergeben, der sie anschließend an die Fahrzeuge verteilt @kuppusamy2017login. Mit dem Wandel zum #gls("SDV") verschiebt sich diese Struktur, da Hersteller mehr Software selbst entwickeln und zugleich Softwareanbieter außerhalb der klassischen Zulieferkette hinzukommen @khamis2025rethinking. #cite(form: "prose", <khamis2025rethinking>) bezeichnen diese Entwicklung als die Dezentralisierung der Lieferkette.
 
-Für die vorliegende Arbeit ergeben sich daraus zwei Folgerungen. Erstens stehen Funktionsumfang und Verhalten eines Fahrzeugs bei Auslieferung nicht mehr endgültig fest. Der technische Zustand eines Fahrzeugs zum Zeitpunkt eines Unfalls kann sich daher erheblich von dem Zustand unterscheiden, in dem es typgenehmigt und verkauft wurde @unece2021r156. Zweitens ist an der Software eines Fahrzeugs eine Vielzahl von Organisationen beteiligt. Jede dieser Organisationen bildet einen möglichen Ansatz für Angriffe auf die Lieferkette, die in @ch:supply-chain[Kapitel] untersucht werden.
+Für die vorliegende Arbeit ergeben sich daraus zwei Folgerungen. Erstens stehen Funktionsumfang und Verhalten eines Fahrzeugs bei Auslieferung nicht mehr endgültig fest. Der technische Zustand eines Fahrzeugs zum Zeitpunkt eines Unfalls kann sich daher erheblich von dem Zustand unterscheiden, in dem es typgenehmigt und verkauft wurde. Zweitens ist an der Software eines Fahrzeugs eine Vielzahl von Organisationen beteiligt. Jede dieser Organisationen bildet einen möglichen Ansatz für Angriffe auf die Lieferkette, die in @ch:supply-chain[Kapitel] untersucht werden.
 
 == E/E-Architektur <sec:ee-architektur>
 
@@ -55,9 +55,9 @@ Zur Absicherung kryptografischer Schlüssel werden in Steuergeräten zunehmend s
 
 === Softwarearchitektur
 
-Die Software moderner Steuergeräte folgt in weiten Teilen dem Standard #gls("AUTOSAR"). Dieser trennt die Anwendungssoftware von einer standardisierten Basissoftware, die Betriebssystem, Kommunikationsdienste, Diagnosefunktionen und Hardwareabstraktion bereitstellt. Eine Laufzeitumgebung verbindet die Softwarekomponenten miteinander und mit der Basissoftware. So erhält etwa eine Softwarekomponente zur Ansteuerung des Bremslichts über diese Laufzeitumgebung das Signal "Bremspedal betätigt", ohne wissen zu müssen, ob es von einem anderen Teil desselben Steuergeräts oder über einen Bus von einem anderen Steuergerät stammt. Die Standardisierung erleichtert es, Softwarekomponenten verschiedener Zulieferer auf einem Steuergerät zu kombinieren und auf andere Hardware zu übertragen @zimmermann2014bussysteme.
+Die Software moderner Steuergeräte folgt in weiten Teilen dem Standard #gls("AUTOSAR"). Dieser trennt die Anwendungssoftware von einer standardisierten Basissoftware, die Betriebssystem, Kommunikationsdienste, Diagnosefunktionen und Hardwareabstraktion bereitstellt. Eine Laufzeitumgebung verbindet die Softwarekomponenten miteinander und mit der Basissoftware @autosar2025cplsa. So erhält etwa eine Softwarekomponente zur Ansteuerung des Bremslichts über diese Laufzeitumgebung das Signal "Bremspedal betätigt", ohne wissen zu müssen, ob es von einem anderen Teil desselben Steuergeräts oder über einen Bus von einem anderen Steuergerät stammt. Die Standardisierung erleichtert es, Softwarekomponenten verschiedener Zulieferer auf einem Steuergerät zu kombinieren und auf andere Hardware zu übertragen @zimmermann2014bussysteme.
 
-AUTOSAR umfasst heute zwei Plattformen @autosar2024adaptive. Die Classic Platform ist für tief eingebettete Steuergeräte mit harten Echtzeitanforderungen ausgelegt. Ihre gesamte Konfiguration wird zur Entwicklungszeit festgelegt, das Betriebssystem basiert auf dem Standard OSEK/VDX @zimmermann2014bussysteme. Die Adaptive Platform wurde für Hochleistungsrechner entwickelt. Sie basiert auf einem POSIX-konformen Betriebssystem, nutzt eine dienstorientierte Kommunikation und unterstützt Anwendungen, die zur Laufzeit geladen und aktualisiert werden können. In heutigen Fahrzeugen existieren beide Plattformen nebeneinander @autosar2024adaptive.
+AUTOSAR umfasst heute zwei Plattformen @autosar2025apswarch. Die Classic Platform ist für tief eingebettete Steuergeräte mit harten Echtzeitanforderungen ausgelegt. Ihre gesamte Konfiguration wird zur Entwicklungszeit festgelegt, das Betriebssystem basiert auf dem Standard OSEK/VDX @zimmermann2014bussysteme. Die Adaptive Platform wurde für Hochleistungsrechner entwickelt. Sie basiert auf einem POSIX-konformen Betriebssystem, nutzt eine dienstorientierte Kommunikation und unterstützt Anwendungen, die zur Laufzeit geladen und aktualisiert werden können. In heutigen Fahrzeugen existieren beide Plattformen nebeneinander @autosar2025apswarch.
 
 Die Standardisierung hat eine Kehrseite, die für die Sicherheitsbetrachtung relevant ist. Ziel von AUTOSAR ist es, Softwarekomponenten herstellerübergreifend wiederverwenden zu können @zimmermann2014bussysteme. Wird dieselbe Komponente in Fahrzeugen mehrerer Hersteller eingesetzt, betrifft eine Schwachstelle oder ein eingeschleuster Schadcode darin potenziell eine große Zahl von Fahrzeugen unterschiedlicher Marken statt eines einzelnen Fahrzeugmodells.
 
@@ -85,7 +85,7 @@ In der *zonalen Architektur* richtet sich die Gliederung nach dem Einbauort. Zon
 
 === Gateways und Domänentrennung
 
-Gateways haben in der E/E-Architektur eine doppelte Funktion. Sie übersetzen zwischen unterschiedlichen Bussystemen und Protokollen. Zugleich wirken sie als Filter, indem sie ausschließlich ausgewählte Nachrichten von einer Domäne in eine andere weiterleiten @jiang2024sdv @aliwa2021cyberattacks. Damit sollen beispielsweise Nachrichten aus dem Infotainment nicht ungefiltert in die Fahrwerkdomäne gelangen @miller2015remote. Eine denkbare Filterregel erlaubt etwa, dass die aktuelle Geschwindigkeit aus der Fahrwerkdomäne an das Infotainment weitergegeben wird, um sie im Display anzuzeigen, und sperrt die Gegenrichtung für Nachrichten, die eine Bremsung anfordern. 
+Gateways haben in der E/E-Architektur eine doppelte Funktion. Sie übersetzen zwischen unterschiedlichen Bussystemen und Protokollen. Zugleich wirken sie als Filter, indem sie ausschließlich ausgewählte Nachrichten von einer Domäne in eine andere weiterleiten @jiang2024sdv @aliwa2021cyberattacks. Damit sollen beispielsweise Nachrichten aus dem Infotainment nicht ungefiltert in die Fahrwerkdomäne gelangen. Eine denkbare Filterregel erlaubt etwa, dass die aktuelle Geschwindigkeit aus der Fahrwerkdomäne an das Infotainment weitergegeben wird, um sie im Display anzuzeigen, und sperrt die Gegenrichtung für Nachrichten, die eine Bremsung anfordern. 
 
 Wie wichtig diese Trennung ist, zeigte die Untersuchung von #cite(form: "prose", <koscher2010experimental>). Die Autoren wiesen experimentell nach, dass ein Angreifer, der nahezu jedes Steuergerät kompromittiert, ein breites Spektrum sicherheitskritischer Systeme vollständig umgehen kann. Der Angriff von #cite(form: "prose", <miller2015remote>) beruhte ebenfalls darauf, dass vom Infotainmentsystem aus ein Weg in das fahrzeuginterne Bussystem bestand.
 
@@ -182,8 +182,8 @@ Dazu sendet der Angreifer zeitgleich mit einer bestimmten Nachricht des Opfers e
 Für die Sicherheitsbetrachtung lassen sich die Eigenschaften von CAN in vier Punkten zusammenfassen.
 
 - *Broadcast:* Jede Nachricht wird an alle Teilnehmer gesendet, die am selben Bus angeschlossen sind. Jeder Empfänger entscheidet anhand des Identifiers, ob er sie verarbeitet. Jeder Teilnehmer kann damit den gesamten Verkehr mitlesen @aliwa2021cyberattacks.
-- *Keine Absenderadresse:* Eine CAN-Nachricht enthält keine Information darüber, welches Steuergerät sie gesendet hat.
-- *Keine Authentifizierung:* Das Protokoll sieht keine Authentifizierung und keine Verschlüsselung vor. Ein Empfänger kann nicht erkennen, ob eine Bremsanforderung vom zuständigen Steuergerät stammt.
+- *Keine Absenderadresse:* Eine CAN-Nachricht enthält keine Information darüber, welches Steuergerät sie gesendet hat @koscher2010experimental.
+- *Keine Authentifizierung:* Das Protokoll sieht keine Authentifizierung und keine Verschlüsselung vor. Ein Empfänger kann nicht erkennen, ob eine Bremsanforderung vom zuständigen Steuergerät stammt @koscher2010experimental.
 - *Angreifbare Fehlerbehandlung:* Die Fehlerbehandlung lässt sich gezielt missbrauchen, um ein Steuergerät vom Bus zu trennen @cho2016busoff.
 
 CAN wurde in den 1980er-Jahren für die Vernetzung von Steuergeräten innerhalb des Fahrzeugs entwickelt @cia2026can. Seit Fahrzeuge über Mobilfunk und andere Funkschnittstellen von außen erreichbar sind, kann ein Angreifer jedoch über eine solche Schnittstelle Zugang zum Bus erlangen @aliwa2021cyberattacks @miller2015remote.
@@ -224,7 +224,7 @@ Für diese Arbeit sind die Diagnosedienste aus zwei Gründen wichtig. Erstens wi
 
 CAN und andere klassische Bussysteme haben keinen eigenen Schutz gegen gefälschte Nachrichten. Deshalb wurden nachträglich Erweiterungen entwickelt. Verbreitet ist das AUTOSAR-Modul #gls("SecOC") @autosar2024secoc.
 
-SecOC hängt an jede Nachricht zwei Zusatzangaben an:
+SecOC ergänzt eine Nachricht um einen Prüfcode und in der Regel um einen Zählerstand @autosar2024secoc:
 
 - einen Prüfcode, meist einen #gls("MAC"), der zeigt, dass die Nachricht echt und unverändert ist,
 - einen Zählerstand, der verhindert, dass ein Angreifer alte Nachrichten aufzeichnet und später erneut einspielt.
@@ -252,7 +252,7 @@ Diese Sensoren liefern die Daten für Fahrdynamikregelungen wie #gls("ABS") und 
 
 === Sensoren für die Umfelderfassung
 
-Die zweite Gruppe erfasst die Umgebung des Fahrzeugs. Dazu gehören vor allem Kameras, Radar- und LiDAR-Sensoren sowie Ultraschallsensoren für den Nahbereich @winner2024handbuch @yeong2021sensor. Für die eigene Position kommen Satellitennavigation, digitale Karten und die Raddrehzahlen hinzu @petit2015remote. @tab:umfeldsensoren vergleicht die wichtigsten Sensortypen.
+Die zweite Gruppe erfasst die Umgebung des Fahrzeugs. Dazu gehören vor allem Kameras, Radar- und LiDAR-Sensoren sowie Ultraschallsensoren für den Nahbereich @winner2024handbuch @yeong2021sensor. Für die eigene Position kommen Satellitennavigation, digitale Karten und die Raddrehzahlen hinzu @petit2015remote @yeong2021sensor. @tab:umfeldsensoren vergleicht die wichtigsten Sensortypen.
 
 #figure(
   caption: [Vergleich von Sensoren zur Umfelderfassung (eigene Darstellung nach @yeong2021sensor @winner2024handbuch)],
@@ -279,7 +279,7 @@ Die zweite Gruppe erfasst die Umgebung des Fahrzeugs. Dazu gehören vor allem Ka
 
 Jeder Sensortyp hat Stärken und Schwächen. Außerdem können Sensoren durch Defekte, Störsignale oder Wetter ausfallen. Ein einzelner Sensor reicht deshalb für eine Fahraufgabe nicht aus. Moderne Systeme führen die Daten mehrerer Sensoren zu einem gemeinsamen Bild der Umgebung zusammen. Dieser Vorgang heißt Sensordatenfusion @yeong2021sensor. 
 
-Nach #cite(form: "prose", <yeong2021sensor>) ist sie die Grundlage jedes automatisierten Systems. Schon kleine Kalibrierfehler wirken sich deutlich aus: Ist ein Sensor um ein Grad zur Seite verdreht, liegt ein Objekt in 100~m Entfernung rechnerisch um 1,75~m daneben (100~m · tan(1°) ≈ 1,75~m). Je weiter das Objekt entfernt ist, desto größer wird der Fehler. Ein vorausfahrendes Fahrzeug kann so auf der Nachbarspur erscheinen. Umgekehrt kann ein Fahrzeug auf der Nachbarspur plötzlich auf der eigenen Spur liegen.
+Voraussetzung dafür ist die Kalibrierung der Sensoren. #cite(form: "prose", <yeong2021sensor>) bezeichnen sie als Grundlage jedes autonomen Systems. Schon kleine Kalibrierfehler wirken sich deutlich aus: Ist ein Sensor um ein Grad zur Seite verdreht, liegt ein Objekt in 100~m Entfernung rechnerisch um 1,75~m daneben (100~m · tan(1°) ≈ 1,75~m). Je weiter das Objekt entfernt ist, desto größer wird der Fehler. Ein vorausfahrendes Fahrzeug kann so auf der Nachbarspur erscheinen. Umgekehrt kann ein Fahrzeug auf der Nachbarspur plötzlich auf der eigenen Spur liegen.
 
 === Physische Angriffe und Manipulation der Verarbeitung
 
@@ -287,7 +287,7 @@ Sensoren lassen sich auf zwei Wegen angreifen.
 
 Beim *physischen Angriff* stört oder fälscht der Angreifer das Messsignal selbst. #cite(form: "prose", <petit2015remote>) zeigten dies mit handelsüblicher Technik. Sie konnten Kameras blenden und LiDAR-Sensoren mit Laserimpulsen stören oder ihnen Objekte vortäuschen. Die Autoren betonen, dass sich ein automatisiertes Fahrzeug bei schnellen, sicherheitsrelevanten Entscheidungen vollständig auf seine Sensoren verlässt. Für solche Angriffe muss der Angreifer in der Nähe des Fahrzeugs sein und trifft nur ein einzelnes Fahrzeug @petit2015remote.
 
-Bei der *Manipulation der Verarbeitung* bleibt der Sensor unverändert. Zwischen Messung und Entscheidung liegen jedoch mehrere Verarbeitungsschritte in Software. Die Signale werden gefiltert, Objekte erkannt und eingeordnet, die Daten mehrerer Sensoren zusammengeführt. Auch die Kalibrierwerte liegen als Daten in der Software @yeong2021sensor. Wird die Software, die Fusionslogik oder die Kalibrierung manipuliert, entsteht deshalb ein falsches Bild der Umgebung, auch wenn alle Sensoren richtig messen. Der Angreifer muss dafür nicht in der Nähe des Fahrzeugs sein. Gelangt die Manipulation über ein Update ins Fahrzeug, betrifft sie alle Fahrzeuge, die dieses Update erhalten @yeong2021sensor.
+Bei der *Manipulation der Verarbeitung* bleibt der Sensor unverändert. Zwischen Messung und Entscheidung liegen jedoch mehrere Verarbeitungsschritte in Software. Die Signale werden gefiltert, Objekte erkannt und eingeordnet, die Daten mehrerer Sensoren zusammengeführt. Auch die Kalibrierwerte liegen als Daten in der Software @yeong2021sensor. Wird die Software, die Fusionslogik oder die Kalibrierung manipuliert, entsteht deshalb ein falsches Bild der Umgebung, auch wenn alle Sensoren richtig messen. Der Angreifer muss dafür nicht in der Nähe des Fahrzeugs sein. Gelangt die Manipulation über ein Update ins Fahrzeug, betrifft sie alle Fahrzeuge, die dieses Update erhalten.
 
 Diese Arbeit konzentriert sich auf die zweite Form. Physische Angriffe auf Sensoren dienen nur zur Abgrenzung.
 
@@ -322,7 +322,7 @@ Neben Antrieb, Lenkung und Bremse sind weitere Aktoren für die Sicherheit wicht
 - *Beleuchtung* wie Bremslicht und Warnblinkanlage sorgt dafür, dass andere Verkehrsteilnehmer das Fahrzeug wahrnehmen.
 - *Türverriegelung und Fensterheber* sind für das Fahren selbst nicht entscheidend. Sie bestimmen aber, ob Insassen das Fahrzeug im Notfall verlassen und Rettungskräfte hineingelangen können.
 
-#cite(form: "prose", <koscher2010experimental>) zeigten an Fahrzeugen von 2010, wie weit solche Eingriffe gehen. Eine Funktion zum Schutz vor Überschlägen konnte dort selbstständig bremsen, Gas wegnehmen und den Lenkwinkel beeinflussen. Diese Eingriffe sind gewollt und dienen der Sicherheit. Sie zeigen aber auch: Die Software kann technisch gegen den Willen des Fahrers bremsen, beschleunigen oder lenken @koscher2010experimental.
+#cite(form: "prose", <koscher2010experimental>) beschreiben, wie weit solche Eingriffe schon 2010 reichten. Eine Funktion zum Schutz vor Überschlägen kann danach selbstständig bremsen, Gas wegnehmen und den Lenkwinkel beeinflussen. Diese Eingriffe sind gewollt und dienen der Sicherheit. In ihren Versuchen an zwei Serienfahrzeugen konnten die Autoren zudem gegen den Willen des Fahrers die Bremsen deaktivieren, einzelne Räder gezielt abbremsen und den Motor stoppen @koscher2010experimental.
 
 === X-by-Wire und Rückfallebenen
 
@@ -359,7 +359,7 @@ Zwei weitere Begriffe sind wichtig. Der Einsatzbereich, englisch #gls("ODD"), be
   ),
 ) <tab:sae-level>
 
-Ein einzelner Abstandsregeltempomat, der Geschwindigkeit und Abstand zum Vorderfahrzeug regelt, entspricht etwa Stufe~1. Wird er mit einem Spurhalteassistenten kombiniert, der gleichzeitig lenkt, ist das Stufe~2. Ein Stauassistent, bei dem der Fahrer im Stau die Hände vom Lenkrad nehmen und sich anderen Tätigkeiten zuwenden darf, ist ein System der Stufe~3 @sae2021j3016 @mercedes2021drivepilot.
+Ein einzelner Abstandsregeltempomat, der Geschwindigkeit und Abstand zum Vorderfahrzeug regelt, entspricht etwa Stufe~1. Wird er mit einem Spurhalteassistenten kombiniert, der gleichzeitig lenkt, ist das Stufe~2. Ein Stauassistent, bei dem der Fahrer im Stau die Hände vom Lenkrad nehmen und sich anderen Tätigkeiten zuwenden darf, ist ein System der Stufe~3 @sae2021j3016 @mercedes2021drivepilot. Der Sprachgebrauch ist dabei nicht einheitlich: Mercedes-Benz bezeichnet sein System der Stufe~3 als hochautomatisiert @mercedes2021drivepilot, während @tab:sae-level diesen Begriff für Stufe~4 verwendet.
 
 Bis Stufe~2 bleibt der Mensch somit für die Überwachung verantwortlich und muss jederzeit eingreifen können. Ab Stufe~3 übernimmt das System die dynamische Fahraufgabe innerhalb seines Einsatzbereichs. Der Mensch muss das System nicht mehr fortlaufend überwachen, aber auf eine Übernahmeaufforderung reagieren.
 
@@ -367,7 +367,7 @@ Aktive Sicherheitssysteme wie das ESP oder der Notbremsassistent sind nach SAE~J
 
 === Funktionsweise
 
-Unabhängig von der Stufe arbeiten alle Assistenzsysteme nach demselben Muster, das #cite(form: "prose", <petit2015remote>) in drei Schritten beschreiben:
+Unabhängig von der Stufe arbeiten alle Assistenzsysteme nach demselben Muster. In Anlehnung an #cite(form: "prose", <petit2015remote>) lässt es sich in drei Schritte gliedern:
 
 + *Wahrnehmen:* Sensoren erfassen Daten über die Umgebung und das eigene Fahrzeug.
 + *Verstehen und Planen:* Die Software erkennt Objekte, führt die Daten zu einem Bild der Umgebung zusammen, bewertet die Lage und plant das weitere Vorgehen, beispielsweise eine Ausweichbahn oder eine Bremsung.
@@ -392,7 +392,7 @@ In der EU sind Assistenzsysteme keine Sonderausstattung mehr. Die Verordnung (EU
   ),
 ) <tab:gsr-stufen>
 
-Notbremsassistent, Notfall-Spurhalteassistent und Geschwindigkeitsassistent sind für neue Fahrzeugtypen seit dem 6.~Juli~2022 Pflicht, für alle Neuzulassungen seit dem 7.~Juli~2024 @bmv2024fahrzeugsicherheit. Jeder neu zugelassene Pkw in der EU hat damit Umfeldsensoren und Software, die selbstständig bremsen und lenken kann @eu2019gsr.
+Notbremsassistent, Notfall-Spurhalteassistent und Geschwindigkeitsassistent sind für neue Fahrzeugtypen grundsätzlich seit dem 6.~Juli~2022 Pflicht, für alle Neuzulassungen seit dem 7.~Juli~2024. Die Erkennung von Fußgängern und Radfahrern durch den Notbremsassistenten folgt mit Zeitstufe~C @bmv2024fahrzeugsicherheit. Jeder neu zugelassene Pkw in der EU hat damit Umfeldsensoren und Software, die selbstständig bremsen und lenken kann @eu2019gsr.
 
 === Automatisiertes und autonomes Fahren
 
