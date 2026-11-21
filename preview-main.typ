@@ -1,5 +1,6 @@
 #import "@preview/clean-dhbw:0.6.0": *
-#import "glossary.typ": glossary-entries
+#import "glossary.typ": fachbegriffe
+#import "abkürzungen.typ": abkürzungen
 
 #show: clean-dhbw.with(
   title: "Car-Hacking: Wo endet Optimierung, wo beginnt rechtlich relevante Täuschung, und wer haftet?",
@@ -15,7 +16,7 @@
   at-university: false, // if true the company name on the title page and the confidentiality statement are hidden
   bibliography: bibliography("sources.bib"),
   date: datetime.today(),
-  glossary: glossary-entries, // displays the glossary terms defined in "glossary.typ"
+  glossary: abkürzungen + fachbegriffe, // displays the glossary terms defined in "glossary.typ"
   language: "de", // en, de
   supervisor: (university: "Herr Zimmer"),
   university: "Duale Hochschule Baden-Württemberg",
@@ -51,7 +52,7 @@ Im folgenden werden einige nützliche Elemente und Funktionen zum Erstellen von 
 
 Verwende die `gls`-Funktion, um Ausdrücke aus dem Glossar einzufügen, die dann dorthin verlinkt werden. Ein Beispiel dafür ist:
 
-Im diesem Kapitel wird eine #gls("Softwareschnittstelle") beschrieben. Man spricht in diesem Zusammenhang auch von einem #gls("API"). Die Schnittstelle nutzt Technologien wie das #gls("HTTP").
+Im diesem Kapitel wird eine #gls("Softwareschnittstelle") beschrieben. Man spricht in diesem Zusammenhang auch von einem #gls("ECU"). Die Schnittstelle nutzt Technologien wie das #gls("OTA").
 
 Das Template nutzt das `glossarium`-Package für solche Glossar-Referenzen. In der zugehörigen #link("https://typst.app/universe/package/glossarium/", "Dokumentation") werden noch weitere Varianten für derartige Querverweise gezeigt. Dort ist auch im Detail erläutert, wie das Glossar aufgebaut werden kann.
 
@@ -129,8 +130,8 @@ Quellcode mit entsprechender Formatierung wird wie folgt eingefügt:
 == Verweise
 
 Für Literaturverweise verwendet man die `cite`-Funktion oder die Kurzschreibweise mit dem \@-Zeichen:
-- `#cite(form: "prose", <iso18004>)` ergibt: \ #cite(form: "prose", <iso18004>)
-- Mit `@iso18004` erhält man: @iso18004
+- `#cite(form: "prose", <miller2015remote>)` ergibt: \ #cite(form: "prose", <miller2015remote>)
+- Mit `@miller2015remote` erhält man: @miller2015remote
 
 Tabellen, Abbildungen und andere Elemente können mit einem Label in spitzen Klammern gekennzeichnet werden (die Tabelle oben hat z.B. das Label `<table>`). Sie kann dann mit `@table` referenziert werden. Das ergibt im konkreten Fall: @table
 
