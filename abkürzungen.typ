@@ -42,4 +42,20 @@
   (key: "PKI", short: "PKI", long: "Public Key Infrastructure", group: "Abkürzungen"),
   (key: "OCPP", short: "OCPP", long: "Open Charge Point Protocol", group: "Abkürzungen"),
 
+  // Kapitel 4
+  (key: "NHTSA", short: "NHTSA", long: "National Highway Traffic Safety Administration", group: "Abkürzungen"),
+  (key: "SOTA", short: "SOTA", long: "Software-over-the-Air", group: "Abkürzungen"),
+  (key: "FOTA", short: "FOTA", long: "Firmware-over-the-Air", group: "Abkürzungen"),
+  (key: "UCM", short: "UCM", long: "Update and Configuration Management", group: "Abkürzungen"),
+  (key: "VUCM", short: "V-UCM", long: "Vehicle Update and Configuration Management", group: "Abkürzungen"),
+  (key: "TLS", short: "TLS", long: "Transport Layer Security", group: "Abkürzungen"),
+  (key: "VIN", short: "VIN", long: "Vehicle Identification Number", group: "Abkürzungen"),
+  (key: "TUF", short: "TUF", long: "The Update Framework", group: "Abkürzungen"),
+  (key: "RXSWIN", short: "RXSWIN", long: "RX Software Identification Number", group: "Abkürzungen"),
+  (key: "CRA", short: "CRA", long: "Cyber Resilience Act", group: "Abkürzungen"),
+ 
+)
+
+
+  
 )  

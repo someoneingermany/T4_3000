@@ -419,3 +419,6 @@ Dieses Kapitel hat gezeigt, dass die meisten sicherheitsrelevanten Funktionen ei
 + *Mechanische Rückfallebenen nehmen ab.* Mit X-by-Wire und zunehmender Automatisierung sinkt die Möglichkeit des Menschen, eine Fehlfunktion zu erkennen und zu korrigieren.
 
 Wie Angreifer Zugang zu diesen Systemen bekommen, beschreibt das folgende Kapitel.
+
+
+
